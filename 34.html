@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dogs</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+.body {
+  font-family: Arial;
+  margin: 0;
+}
+.header {
+  padding: 60px;
+  text-align: center;
+  background-image: url("dog.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: 100% 100%;
+  color:black;
+}
+.navbar {
+  display: flex;
+  background-color: gray;
+}
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+.side {
+  flex: 20%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+.main {
+  flex: 80%;
+  background-color: white;
+  padding: 20px;
+}
+.header {
+  text-align: center;
+  padding: 32px;
+}
+.row {
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+.column {
+  -ms-flex: 25%;
+  flex: 25%;
+  max-width: 35%;
+  padding: 0 4px;
+}
+.column img {
+  margin-top: 10px;
+  vertical-align: middle;
+   background-attachment: fixed;  
+  background-size: 100% 100%;
+}
+.footer {
+  padding: 20px;
+  text-align: center;
+  background:white; 
+}
+.button {
+  border-radius: 4px;
+  background-color: tomato;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2px;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button:hover span {
+  padding-right: 25px;
+}
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+@media (max-width: 700px) {
+  .row, .navbar {   
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+<div style="background:white;padding:5px">
+  <h1 style="text-align:center;">DOGS &#128041;</h1>
+</div>
+<div class="header">
+  <h1>HUMAN FRIENDLY</h1>
+  <p>dogs<b> and there</b> breeds.</p>
+</div>
+<div class="navbar">
+  <a href="https://www.google.com/search?
+
+rlz=1C1CHBF_enIN914IN914&sxsrf=ALeKk02uwlVYZP2wEA3XlyS4jp62
+
+cSdc5A:1611130144673&source=univ&tbm=isch&q=dogs
+
++images&sa=X&ved=2ahUKEwiB09a_h6ruAhWYT30KHUysDBgQjJkEeg
+
+QIARAB&biw=1366&bih=657">IMAGES</a>
+  <a href="https://en.wikipedia.org/wiki/List_of_dog_breeds">LIST OF 
+
+BREEDS</a>
+  <a href="https://simple.wikipedia.org/wiki/Dog#:~:text=Dogs%20(Canis
+
+%20lupus%20familiaris)%20are,animals%20ever%20to%20be
+
+%20domesticated.&text=They%20are%20a%20popular%20pet,loyal
+
+%20and%20listen%20to%20humans.">ABOUT</a>
+</div>
+<div class="row">
+  <div class="side">
+    <h2>About dogs</h2>
+  
+     <img src="cute.jpg" alt="cute" hight="900px" width="210">
+    <p>Dogs (Canis lupus familiaris) are domesticated mammals, not natural 
+
+wild animals. They were originally bred from wolves. They have been bred 
+by humans for a long time, and were the first animals ever to be 
+
+domesticated. ...</p>
+    
+  </div>
+  <div class="main">
+ <h2 style="text-align:center;">BREEDS</h2>
+ <div class="row"> 
+  <div class="column">
+    <img id="image1"src="" alt="img" style="width:100% ">
+      <p id="demo1"></p>
+  </div>
+  <div class="column">
+    <img  id="image2"src=""  style="width:100%">
+    <p id="demo2"></p>
+  </div>  
+  <div class="column">
+    <img id="image3"src=""   style="width:100%">
+    <p id="demo3"></p>
+  </div>
+</div>
+
+</div>
+</div>
+
+<script>
+var img= {
+    "message": [
+        "https://images.dog.ceo/breeds/eskimo/n02109961_2272.jpg",
+        "https://images.dog.ceo/breeds/terrier-yorkshire/n02094433_8669.jpg",
+        "https://images.dog.ceo/breeds/appenzeller/n02107908_2134.jpg"
+    ],
+
+
+
+    "status": ["eskimo","terrier-yorkshire","appenzeller"],
+};
+
+document.getElementById("image1").src =img.message[0] ;
+document.getElementById("demo1").innerHTML =img.status[0];
+document.getElementById("image2").src =img.message[1] ;
+document.getElementById("demo2").innerHTML =img.status[1];
+document.getElementById("image3").src =img.message[2] ;
+document.getElementById("demo3").innerHTML =img.status[2];
+
+</script>
+<div class="footer">
+  
+  <button class="button"  onclick="document.location='35.html' "><span>REFRESH </span></button>
+</div>
+</body>
+</html>
